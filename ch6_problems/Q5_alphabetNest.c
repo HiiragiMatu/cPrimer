@@ -1,14 +1,27 @@
 #include <stdio.h>
+void printLetter(char ch);
+void print(int rows);
 
 int main(void){
-  char ch;
-  int i, j, k;
-  printf("Please Enter a capital character: ");
-  while(scanf("%c", &ch)){
-    for (i = 0; i < (ch - 'A' + 1); i++)
-    {
-      for(j = )
-    }
+  printLetter('E');
+  print(5);
+}
+
+void printLetter(char ch){
+  printf(ch - 'A' + 1);
+}
+
+void print(int rows){
+  for (int row = 1; row <= rows; row++)
+  {
+    int ch;
+    for (int space = row; space < rows; space++)
+      printf(" ");
+    for (ch = 0; ch < row; ch++)
+      printf("%c", 'A' + ch);
+    while(--ch)
+      printf("%c", 'A' + ch - 1);
+    printf("\n");
   }
 }
 
