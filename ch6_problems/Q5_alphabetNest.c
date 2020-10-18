@@ -1,17 +1,24 @@
 #include <stdio.h>
-void printLetter(char ch);
-void print(int rows);
+
+int printLetter(char ch);
+void printPyramid(int rows);
 
 int main(void){
-  printLetter('E');
-  print(5);
+  char ch;
+  printf("Please enter a capital letter: ");
+  while(scanf("%c", &ch) == 1){
+    int n = printLetter(ch); // Assume A has only 1 line and B has 2 line, and so on...
+    printPyramid(n);
+    printf("Next");
+  }
+  return 0;
 }
 
-void printLetter(char ch){
-  printf(ch - 'A' + 1);
+int printLetter(char ch){
+  return ch - 'A' + 1;
 }
 
-void print(int rows){
+void printPyramid(int rows){
   for (int row = 1; row <= rows; row++)
   {
     int ch;
@@ -19,7 +26,7 @@ void print(int rows){
       printf(" ");
     for (ch = 0; ch < row; ch++)
       printf("%c", 'A' + ch);
-    while(--ch)
+    while(--ch) // The state of 'ch' now is the latest ch value. Ex: User enter C, then ch is 3.
       printf("%c", 'A' + ch - 1);
     printf("\n");
   }
