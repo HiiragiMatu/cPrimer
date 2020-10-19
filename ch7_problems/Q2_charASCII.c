@@ -8,6 +8,7 @@ int main(void){
   int i;
   printf("Enter char: ");
   while((userInput = getchar()) != '#'){
+    getchar();
     flag++;
     if(flag == 8){
       printf("\n");
