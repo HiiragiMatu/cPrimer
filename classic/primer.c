@@ -23,7 +23,7 @@ int main(void){
     if(isPrime)
       printf("%lu is prime.\n", num);
     printf("Enter the next number to checked(q to exit): ");
-  }5
+  }
   printf("Bye!");
   return 0;
 }
