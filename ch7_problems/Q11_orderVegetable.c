@@ -68,7 +68,7 @@ int main(void){
   cost_beets = price_beets * lb_beets;
   cost_carrots = price_carrots * lb_carrots;
   cost_total = cost_artichokes + cost_beets + cost_carrots;
-  
+
   lb_total = lb_artichokes + lb_beets + lb_carrots;
   if(lb_total <= 0)
     shipping = 0.0;
@@ -83,7 +83,7 @@ int main(void){
     discount = DISCOUNT * cost_total;
   else
     discount = 0.0;
-  cost_final = cost_total + shipping - discount;
+  cost_final = cost_total + shipping - discount; 
 
   printf("Your order:\n");
   printf("%.2f lbs of artichokes at $%.2f per pound:$ %.2f\n",
