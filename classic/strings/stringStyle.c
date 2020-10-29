@@ -4,6 +4,7 @@
 int main(void){
   char words[MAXLENGTH] = "I am a string in an array.";
   const char *pt1 = "Something is pointing at me.";
+  // Puts會自動換行
   puts("Here are some strings: ");
   puts(MSG);
   puts(words);
